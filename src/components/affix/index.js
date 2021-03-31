@@ -1,33 +1,11 @@
-import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { Animated } from 'react-native';
+import { Animated, Text } from 'react-native';
 
 import styles from './styles';
 
 export default class Affix extends PureComponent {
   static defaultProps = {
     numberOfLines: 1,
-  };
-
-  static propTypes = {
-    numberOfLines: PropTypes.number,
-    style: PropTypes.object,
-
-    color: PropTypes.string.isRequired,
-    fontSize: PropTypes.number.isRequired,
-
-    type: PropTypes
-      .oneOf(['prefix', 'suffix'])
-      .isRequired,
-
-    labelAnimation: PropTypes
-      .instanceOf(Animated.Value)
-      .isRequired,
-
-    children: PropTypes.oneOfType([
-      PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node,
-    ]),
   };
 
   render() {

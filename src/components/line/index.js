@@ -1,11 +1,7 @@
-import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { View, Animated } from 'react-native';
 
 import styles from './styles';
-
-const lineTypes = PropTypes
-  .oneOf(['solid', 'dotted', 'dashed', 'none']);
 
 export default class Line extends PureComponent {
   static defaultProps = {
@@ -14,24 +10,6 @@ export default class Line extends PureComponent {
 
     disabled: false,
     restricted: false,
-  };
-
-  static propTypes = {
-    lineType: lineTypes,
-    disabledLineType: lineTypes,
-
-    disabled: PropTypes.bool,
-    restricted: PropTypes.bool,
-
-    tintColor: PropTypes.string,
-    baseColor: PropTypes.string,
-    errorColor: PropTypes.string,
-
-    lineWidth: PropTypes.number,
-    activeLineWidth: PropTypes.number,
-    disabledLineWidth: PropTypes.number,
-
-    focusAnimation: PropTypes.instanceOf(Animated.Value),
   };
 
   static getDerivedStateFromProps(props, state) {
